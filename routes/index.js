@@ -4,9 +4,12 @@ var GifFinder = require('../lib/gif_finder');
 
 router.get('/:query', function(req, res) {
   GifFinder.find(req.params.query, function(err, link) {
-    res.redirect(link);
+    if (link) {
+      res.redirect(link);
+    } else {
+      throw err;
+    }
   });
-
 });
 
 module.exports = router;
