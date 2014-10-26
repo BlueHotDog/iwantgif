@@ -1,8 +1,7 @@
 function errors(app) {
   app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+    res.status(404);
+    res.json("not found");
   });
 
 
@@ -13,7 +12,7 @@ function errors(app) {
   if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
       res.status(err.status || 500);
-      res.render('error', {
+      res.json({
         message: err.message,
         error: err
       });
@@ -24,7 +23,7 @@ function errors(app) {
   // no stacktraces leaked to user
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.json({
       message: err.message,
       error: {}
     });
