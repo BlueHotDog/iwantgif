@@ -15,9 +15,9 @@ router.get('/:query', function(req, res) {
   } else {
     GifFinder.find(query, function(err, link) {
       if (link) {
-        res.redirect(link);
+        res.redirect(302, link);
       } else {
-        res.redirect("http://24.media.tumblr.com/tumblr_m9h5j2sre11reu1vyo1_500.gif");
+        res.redirect(302, "http://24.media.tumblr.com/tumblr_m9h5j2sre11reu1vyo1_500.gif");
       }
     });
   }
