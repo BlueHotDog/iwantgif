@@ -2,17 +2,12 @@ var express = require('express');
 var router = express.Router();
 var GifFinder = require('../lib/gif_finder');
 
-
-router.get('/', function(req, res) {
-  res.json({});
-});
-
-router.get('/:query', function(req, res) {
+function getImage(req, res) {
   var query = req.params.query;
-
   if (query === null || query.length===0) {
     res.render('index');
   } else {
+    console.log("searching for "+query);
     GifFinder.find(query, function(err, link) {
       if (link) {
         res.redirect(302, link);
@@ -21,6 +16,15 @@ router.get('/:query', function(req, res) {
       }
     });
   }
+}
+
+
+router.get('/', function(req, res) {
+  res.json({});
 });
+
+router.get('/:query.:format', getImage);
+router.get('/:query', getImage);
+
 
 module.exports = router;
