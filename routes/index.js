@@ -20,7 +20,7 @@ function getImage(req, res) {
 
 
 router.get('/', function(req, res) {
-  res.json({});
+  res.render('index')
 });
 
 router.get('/:query.:format', getImage);
