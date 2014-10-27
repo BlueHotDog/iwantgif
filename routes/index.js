@@ -20,7 +20,7 @@ function getImage(req, res) {
 
 
 router.get('/', function(req, res) {
-  res.render('index')
+  res.redirect('http://www.github.com/bluehotdog/iwantgif')
 });
 
 router.get('/:query.:format', getImage);
