@@ -12,7 +12,7 @@ function getImage(req, res) {
       if (link) {
         res.redirect(302, link);
       } else {
-        res.redirect(302, "http://24.media.tumblr.com/tumblr_m9h5j2sre11reu1vyo1_500.gif");
+        res.redirect(302, "http://24.media.tumblr.com/a997566653712fc8b897132a947d98e1/tumblr_mpexbnloCV1soqenlo1_250.gif");
       }
     });
   }
