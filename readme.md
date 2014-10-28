@@ -4,6 +4,14 @@
 
 The best way to get your daily gif dosage.
 
+# Usage
+
+- `http://iwantgif.com/mcfly`
+- `http://iwantgif.com/amazing`
+- `http://iwantgif.com/what are you doing`
+
+you get the idea
+
 # Why?
 
 Want to be funny but too busy to actually search for gifs? 
