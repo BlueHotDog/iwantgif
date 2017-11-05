@@ -2,6 +2,8 @@
 
 # Welcome to IWantGIF
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/BlueHotDog/iwantgif.svg)](https://greenkeeper.io/)
+
 The best way to get your daily gif dosage.
 
 # Usage
